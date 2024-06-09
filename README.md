@@ -12,12 +12,12 @@ Antes de partir para a construção e características da implementação, é v�
 * joblib
 * numpy
 ### Importações para API
-* flask & flask - ngrok
-* pyngrok - ngrok
-* threading
-* Pil
-* io
-* Requests
+* flask & flask - ngrok;
+* pyngrok - ngrok;
+* threading;
+* Pil;
+* io;
+* Requests.
 
 ## Modelo
 O modelo utilizado é uma rede convolucional genérica com arquitetura CNN. Este modelo é composto pelas seguintes características:
@@ -30,7 +30,7 @@ O modelo utilizado é uma rede convolucional genérica com arquitetura CNN. Este
 
 * Flatten e camada densa:
     * Flatten achata a saída da última camada convolucional para transformar os dados de uma matriz 3D para um vetor 1D;
-    * A camada densa tem 128 unidades com a ativação ReLU e a camada de saída tem 10, com função de ativação softmax para classificação multiclasse
+    * A camada densa tem 128 unidades com a ativação ReLU e a camada de saída tem 10, com função de ativação softmax para classificação multiclasse.
 
 Ordem:
 1. Primeira Camada Convolucional: 64 filtros 5x5 com ativação ReLU, entrada de imagens de 32x32 pixels com 3 canais(RGB);
@@ -40,7 +40,7 @@ Ordem:
 5. Terceira Camada Convolucional: 128 filtros de tamanho 5x5 com ativação ReLU;
 6. Flatten;
 7. Camada Densa: 128 unidades com ativação ReLU;
-8. Camada de Saída: 10 unidades com ativação softmax;
+8. Camada de Saída: 10 unidades com ativação softmax.
 
 ### Compilação do modelo
 * Otimizador: otimizador Adam, ajusta automaticamente a taxa de aprendizado;
@@ -56,7 +56,7 @@ Métrica: Acurácia ou "accuracy", para avaliar o desempenho do modelo durante o
 O modelo é salvo no arquivo "model.h5" que armazena a arquitetura completa, os pesos treinados e o estado do otimizador, permitindo retomar o treinamento.
 
 ## Impelmentação da API
-Nesta seção, será mostrada a implementação da API Flask junto ao ngrok para rodar uma aplicação no servidor a fim de permitir que o usuário faça uma requisição POST de uma imagem e receber a classificação desta
+Nesta seção, será mostrada a implementação da API Flask junto ao ngrok para rodar uma aplicação no servidor a fim de permitir que o usuário faça uma requisição POST de uma imagem e receber a classificação desta.
 
 ### Configuração e instalação
 #### Flask e ngrok
@@ -64,7 +64,7 @@ O Flask é utilizado para criar uma aplicação web simples, enquanto o ngrok é
 
 Instalação de Pacotes: Os pacotes necessários incluem flask-ngrok para integrar Flask com ngrok e pyngrok para gerenciar túneis ngrok. Também é realizada uma atualização do pyngrok para garantir que a versão mais recente esteja em uso.
 
-Para usar definitivamente o ngrok, é necessário efetuar cadastro e login na plataforma, a plataforma permite o uso de apenas três túneis de forma gratuita, para implementar no modelo e iniciar um servidor, é necessário obter um token gerado no momento que é feito o cadastro na plataforma, para isso, é necessário entrar em sua conta, ir em dashboard e na seção chamada "your authtoken" e copiar o token disponível e inserir no seu projeto. Além disso, é preciso ter o Google Authenticator associado a sua conta o qual controla cada sessão de uso com segurança
+Para usar definitivamente o ngrok, é necessário efetuar cadastro e login na plataforma, a plataforma permite o uso de apenas três túneis de forma gratuita, para implementar no modelo e iniciar um servidor, é necessário obter um token gerado no momento que é feito o cadastro na plataforma, para isso, é necessário entrar em sua conta, ir em dashboard e na seção chamada "your authtoken" e copiar o token disponível e inserir no seu projeto. Além disso, é preciso ter o Google Authenticator associado a sua conta o qual controla cada sessão de uso com segurança.
 
 * Instruções de funcionamento:
     1. Acessar o Site do ngrok:
@@ -86,10 +86,10 @@ Para usar definitivamente o ngrok, é necessário efetuar cadastro e login na pl
         Após escanear o código QR, o aplicativo exibirá um código de 6 dígitos. Digite esse código no site do ngrok para completar a configuração da verificação em duas etapas;
     
     7. Acessar o Dashboard DO Ngrok após login:
-        No painel de controle do ngrok, procure por uma seção chamada "Auth" ou "Your Auth Token".
+        No painel de controle do ngrok, procure por uma seção chamada "Auth" ou "Your Auth Token";
     
     8. Copiar o AuthToken:
-        Você verá seu token de autenticação nesta seção. Clique em "Copy" para copiar o token.
+        Você verá seu token de autenticação nesta seção. Clique em "Copy" para copiar o token;
     
     9. Configurar o token no seu projeto:
         Use a seguinte configuração substituindo o "SEU_TOKEN_AQUI" pelo token copiado: 
@@ -109,7 +109,7 @@ Para usar definitivamente o ngrok, é necessário efetuar cadastro e login na pl
  #### Requisição da predição
  * Requisição POST: Envia imagens no formato png ou jpg à API Flask usando requisições POST através do pacote requests importado;
  * URL do ngrok: A URL gerada pelo ngrok é usada para fazer as requisições POST, permitindo o acesso externo a API;
- * Envio e Resposta: A imagem inputada é enviada para a API, após isso, a resposta é enviada, incluindo a classe prevista que é mostrada seguindo a numeração especifica da classe do CIFAR-10
+ * Envio e Resposta: A imagem inputada é enviada para a API, após isso, a resposta é enviada, incluindo a classe prevista que é mostrada seguindo a numeração especifica da classe do CIFAR-10.
 
  ### Classes do CIFAR-10 numeradas:
  Normalmente o output vem em formato JSON e com a numeração especifica que representa cada classe, a seguir é possível verificar cada classe e sua respectiva numeração:
