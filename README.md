@@ -26,7 +26,7 @@ O modelo utilizado é uma rede convolucional genérica com arquitetura CNN. Este
     * Três camadas convolucionais, sendo as três com função de ativação ReLU. A primeira camada possui 64 filtros de tamanho 5x5 e entrada de imagens de 32x32 com três canais RGB. As outras duas camadas convolucionais também possui função de ativação ReLU, porém, as duas tem 128 filtros de tamanho 5x5.
 
 * MaxPooling(Pooling máximo):
-    * Há duas camadas de pooling máximo, ambas são com tamanho 2x2, o qual reduz pela metade as dimensões espaciais da saída da camada convolucional
+    * Há duas camadas de pooling máximo, ambas são com tamanho 2x2, o qual reduz pela metade as dimensões espaciais da saída da camada convolucional.
 
 * Flatten e camada densa:
     * Flatten achata a saída da última camada convolucional para transformar os dados de uma matriz 3D para um vetor 1D;
