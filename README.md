@@ -6,11 +6,11 @@ Este relatório descreve o desenvolvimento de um modelo de classificação de im
 Antes de partir para a construção e características da implementação, é válido destacar o uso do CIFAR-10. O CIFAR-10 é um conjunto de dados distribuídas em 10 classes diferentes, cada uma com 6.000 imagens. As classes do CIFAR-10 vão desde animais até objetos como automóveis, cada uma sendo exclusiva. Seu conjunto de dados é divido em duas partes: treinamento e teste. O conjunto de treinamento contém 50.000 imagnes, com 5.000 imagens de cada classe. Já o conjunto de teste possui 10.000 imagens, com 1.000 por classe. Esse tipo de divisão auxilia no treino e teste dos modelos, auxiliando também na avaliação de desempenho em relação a generalização dos dados. Além disso, é válido lembrar que as imagens do CIFAR-10 são em resolução baixa.
 
 ## Importações necessárias
-* drive
-* tensorflow
-* keras do tensorflow
-* joblib
-* numpy
+* drive;
+* tensorflow;
+* keras do tensorflow;
+* joblib;
+* numpy.
 ### Importações para API
 * flask & flask - ngrok;
 * pyngrok - ngrok;
