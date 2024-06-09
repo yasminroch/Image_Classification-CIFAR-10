@@ -1,4 +1,4 @@
-# Image_Classification-CIFAR-10
+# Relatório de classificação de imagem com CIFAR-10
 
 Este relatório descreve o desenvolvimento de um modelo de classificação de imagens utilizando o conjunto de dados CIFAR-10, API Flask e Ngrok. O modelo permite aos usuários enviar imagens para serem classificadas em uma das 10 categorias do CIFAR-10: avião, automóvel, pássaro, gato, veado, cachorro, sapo, cavalo, navio e caminhão. Para fazer o uso de tal modelo, é possível fazer o download do arquivo cifar10.ipynb acima e usar as imagens disponíveis ou qualquer outra de acordo com a preferência. Neste relatório será abordado a construção do modelo, como configurar e usar.
 
